@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 3-Shift Escape Plan - DVH Nexus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .headline {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a1a2e;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .subheadline {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .author-info {
+            flex: 1;
+        }
+        .author-name {
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .author-title {
+            font-size: 13px;
+            color: #666;
+        }
+        .bullet-points {
+            margin-bottom: 24px;
+        }
+        .bullet {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #333;
+        }
+        .bullet-icon {
+            color: #667eea;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .form {
+            margin-bottom: 16px;
+        }
+        .input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 12px;
+            transition: border-color 0.3s;
+        }
+        .input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        .button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        .privacy {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+        .urgency {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-align: center;
+            color: #856404;
+        }
+        .success-message {
+            display: none;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #155724;
+        }
+        .success-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="success-message" class="success-message">
+            <strong>✓ You're in!</strong><br>
+            Check your email for the Escape Plan.
+        </div>
+
+        <h1 class="headline">The 3-Shift Escape Plan</h1>
+        <p class="subheadline">
+            How I built an AI team for <span class="highlight">$40/month</span> while working day shifts at Walmart — and how you can escape too.
+        </p>
+        
+        <div class="author">
+            <div class="author-avatar">DH</div>
+            <div class="author-info">
+                <div class="author-name">Donald Hammas</div>
+                <div class="author-title">3-Year Walmart Associate → Retired July 22, 2026</div>
+            </div>
+        </div>
+
+        <div class="urgency">
+            ⚠️ I'm documenting my entire escape journey. Get the behind-the-scenes playbook free.
+        </div>
+
+        <div class="bullet-points">
+            <div class="bullet">
+                <span class="bullet-icon">✓</span>
+                <span>5-module video course outline</span>
+            </div>
+            <div class="bullet">
+                <span class="bullet-icon">✓</span>
+                <span>AI tool setup guides (phone-first)</span>
+            </div>
+            <div class="bullet">
+                <span class="bullet-icon">✓</span>
+                <span>30-day action checklist</span>
+            </div>
+            <div class="bullet">
+                <span class="bullet-icon">✓</span>
+                <span>Copy/paste templates for videos & DMs</span>
+            </div>
+        </div>
+
+        <form class="form" id="escape-form">
+            <input type="text" name="firstName" id="firstName" class="input" placeholder="Your first name" required>
+            <input type="email" name="email" id="email" class="input" placeholder="Your best email" required>
+            <button type="submit" class="button" id="submit-btn">Get The Free Plan →</button>
+        </form>
+
+        <p class="privacy">🔒 No spam. Unsubscribe anytime. Your info is safe.</p>
+    </div>
+
+    <script>
+    (function() {
+        // GlobalControl Configuration
+        const GC_API_KEY = '905cceefcb95fb7c2cce20629f8ba63609dc6b70c3244aab5385e84bde7bf04b';
+        const GC_BASE_URL = 'https://api.globalcontrol.io/api/ai';
+        
+        // Tag IDs from GlobalControl
+        const TAG_IDS = {
+            '3-shift-escape-plan': '6a35811fc2b6d1efefb25daf',
+            'walmart-escape': '6a358122c2b6d1efefb25e9c',
+            'lead-magnet': '6a35812ac2b6d1efefb26dab'
+        };
+
+        document.getElementById('escape-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const firstName = document.getElementById('firstName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            
+            if (!firstName || !email) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Disable button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            try {
+                // Step 1: Create contact
+                const contactResponse = await fetch(`${GC_BASE_URL}/contacts`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-API-KEY': GC_API_KEY
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        firstName: firstName,
+                        lastName: '',
+                        customFields: {
+                            source: 'dvhnexus-landing',
+                            lead_magnet: '3-shift-escape-plan',
+                            submitted_at: new Date().toISOString()
+                        }
+                    })
+                });
+                
+                if (!contactResponse.ok) {
+                    throw new Error('Contact creation failed');
+                }
+                
+                const contact = await contactResponse.json();
+                console.log('Contact created:', contact._id || contact.id);
+                
+                // Step 2: Fire all tags (don't wait)
+                const contactId = contact._id || contact.id;
+                Object.values(TAG_IDS).forEach(tagId => {
+                    fetch(`${GC_BASE_URL}/tags/fire-tag/${tagId}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-API-KEY': GC_API_KEY
+                        },
+                        body: JSON.stringify({ 
+                            contactId: contactId,
+                            email: email
+                        })
+                    }).catch(err => console.error('Tag error:', err));
+                });
+                
+                // Show success
+                document.getElementById('success-message').classList.add('show');
+                document.getElementById('escape-form').style.display = 'none';
+                
+                // Redirect after 3 seconds
+                setTimeout(() => {
+                    window.location.href = 'welcome.html';
+                }, 3000);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Get The Free Plan →';
+                alert('Something went wrong. Please try again.');
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
